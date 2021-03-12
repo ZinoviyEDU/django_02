@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Hello, {{ main_dict.name }}</h1>
+
+    {% if main_dict.is_big %}
+        It's BIG!!!
+    {% else %}
+        It's LITTLE!!!
+    {% endif %}
+
+    <h1>Some list</h1>
+    <lo>
+    {% for item in main_dict %}
+        <li>{{ item|length }}</li>
+    {% endfor %}
+    </lo>
+
+    <h1>Filters</h1>
+    {{ title|upper }}
+
+</body>
+</html>

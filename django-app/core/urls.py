@@ -17,8 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 
+from simple.views import test_view
+from home.views import IndexView
 
 urlpatterns = [
     path('adm/', admin.site.urls),
     path('simple/', include('simple.urls')),
+    path('template/', test_view),
+    path('', IndexView.as_view()),
 ]
